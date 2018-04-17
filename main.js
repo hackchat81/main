@@ -6,9 +6,8 @@
   * License: WTFPL ( http://www.wtfpl.net/txt/copying/ )
   *
   */
-
-  
-/*'use strict';
+  /*
+'use strict';
 
 // import required classes
 const Managers = require('./src/managers');
@@ -32,5 +31,7 @@ const stats = core.managers.stats = new Managers.Stats(core);
 stats.set('start-time', process.hrtime());
 
 // initialize and start the server
-const server = new wsServer(core);
-*/
+const server = new wsServer(core);*/
+
+
+

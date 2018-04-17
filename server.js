@@ -5,6 +5,23 @@ var express = require('express'),
 // creating express server
 var app = express();
  
+
+const Managers = require('./src/managers');
+const wsServer = require('./src/core/server');
+
+const core = {};
+
+core.managers = {};
+core.managers.dynamicImports = global.dynamicImports = new Managers.ImportsManager(core, __dirname);
+core.managers.dynamicImports.init();
+
+
+const commands = core.commands = new Managers.CommandManager(core);
+commands.loadCommands();
+
+const stats = core.managers.stats = new Managers.Stats(core);
+stats.set('start-time', process.hrtime());
+
     
 // parse application/json 
 app.use(bodyParser.json());
