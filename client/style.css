@@ -347,7 +347,21 @@ ul li {
        .modal-dialog {
           margin-top: 40%;
       }
-  
+
+
+
+
+      .buttonclass{
+
+        width: 86%;
+        margin-left: 7%
+
+      }
+    
+     h4{
+
+       font-size: 15px;
+     }
 
   }
 
