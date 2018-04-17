@@ -13,17 +13,43 @@
 
 </head>
 
+<style type="text/css">
+  
+   .modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+
+</style>
+
 <body>
 <div class="carousel fade-carousel carousel-fade slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+
+
   <!-- Overlay -->
   <div class="overlay"></div>
 
   <!-- Indicators -->
-  <ol class="carousel-indicators">
+<!--   <ol class="carousel-indicators">
     <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
     <li data-target="#bs-carousel" data-slide-to="1"></li>
     <li data-target="#bs-carousel" data-slide-to="2"></li>
-  </ol>
+  </ol> -->
   
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
@@ -60,5 +86,51 @@
   </div> 
 </div>
 
+
+
+<div class="modal" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" style="text-align: center;"><b>Create a Room Link start talking</b></h3>
+       
+      </div>
+      <div class="modal-body">
+        <form >
+        
+          <div style="text-align: center;">
+          <label for="room-name" class="jstest-urlbar-default-label label--cQpBi">hack.chat/</label>
+          <input type="text" class="inputbox" value="" placeholder="company, project or other name">
+          </div>
+
+          <div ><div><button type="submit" disabled="" class="buttonclass" >Create new room</button></div>
+
+
+          <div  style="text-align: center; margin-top: 3%">Know where to go? <span class="">Enter existing room</span></div>
+
+        </div>
+
+
+        </form>
+      </div>
+     <!--  <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
 </body>
+
+<script type="text/javascript">
+  
+   
+    $(window).on('load',function(){
+        $('#myModal').modal('show');
+    });
+</script>
+
+
+
 </html>
