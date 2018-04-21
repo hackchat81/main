@@ -92,24 +92,23 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" style="text-align: center;"><b>Create a Room Link start talking</b></h4>
+        <h4 class="modal-title" style="text-align: center;  margin-top: 2%;"><b>Create or join a chat room</b></h4>
        
       </div>
       <div class="modal-body">
-        <form >
+        <form id="formId"">
         
           <div style="text-align: center;">
-          <label for="room-name" class="jstest-urlbar-default-label label--cQpBi">hack.chat/</label>
-          <input type="text" class="inputbox" value="" placeholder="company, project or other name">
+          <label for="room-name" class="jstest-urlbar-default-label label--cQpBi">tempo.chat/?</label>
+          <input type="text" class="inputbox" value="" id="nametext" placeholder="company, project or other name" required>
           </div>
 
-          <div ><div><button type="submit" disabled="" class="buttonclass" >Create new room</button></div>
+          <div style="margin-bottom: 2%">
+            <button type="submit" class="buttonclass">Enter room</button>
 
-
-          <div  style="text-align: center; margin-top: 3%">Know where to go? <span class="">Enter existing room</span></div>
+         <!--  <div  style="text-align: center; margin-top: 3%">Know where to go? <span class="">Enter existing room</span></div> -->
 
         </div>
-
 
         </form>
       </div>
@@ -130,7 +129,15 @@
     $('#myModal').modal({
     backdrop: 'static',
     keyboard: false
-})
+
+    })
+
+   $('#formId').submit(function () {
+    // sendContactForm();
+      window.open("http://www.tempo.chat/?"+$("#nametext").val(),"_self")
+     return false;
+    });
+
 
 
 </script>
